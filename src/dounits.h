@@ -1094,7 +1094,7 @@ public:
 
   TSOURCE_UNIT * FindNewSource(TPOSITION_3D position);
   //bool FindNewSource(TPOSITION_3D position);
-  TSOURCE_UNIT * TWORKER_UNIT::IsSourceOnPosition(int pos_x, int pos_y);
+  TSOURCE_UNIT * IsSourceOnPosition(int pos_x, int pos_y);
 
   //! Constructor.
   TWORKER_UNIT(int uplayer, int ux, int uy, int uz, int udirection, TFORCE_ITEM *mi, int new_unit_id, bool global_unit)

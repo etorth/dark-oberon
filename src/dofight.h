@@ -230,7 +230,7 @@ public:
   void SetProtection(const float new_value)
     {if (new_value > 1.0f) protection = 1.0f; else if (new_value < 0) protection = 0; else protection = new_value;};
 
-  TDEFENSE::TDEFENSE()
+  TDEFENSE()
     { armour = 0; protection = 0; }
 
 private:

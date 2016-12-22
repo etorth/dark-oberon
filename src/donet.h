@@ -489,7 +489,7 @@ public:
   /** Exception throwed when there was an error with resolving hostname. */
   class ResolveException {};
 
-  TNET_RESOLVER::TNET_RESOLVER ();
+  TNET_RESOLVER ();
 
   static std::string GetHostName ();
 

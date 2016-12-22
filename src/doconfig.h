@@ -211,7 +211,7 @@ struct TCONFIG {
   GLubyte pr_warfog_color[4];         //!< Precomputed warfog color and alfa-channel. [-128..127]
   double pr_expected_frame_duration;  //!< Precomputed expected frame duration from max_frame_rate. [seconds]
 
-  TCONFIG::TCONFIG();
+  TCONFIG();
 };
 
 

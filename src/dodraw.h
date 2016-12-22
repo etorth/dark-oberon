@@ -140,7 +140,7 @@ struct TPROJECTION {
   void SetProjection(TPROJECTION_TYPE projection);
   void Update();
 
-  TPROJECTION::TPROJECTION() { SetProjection(PRO_MENU); };
+  TPROJECTION() { SetProjection(PRO_MENU); };
 };
 
 

@@ -755,7 +755,7 @@ public:
   //!<Sets if unit can walk on source or building can be built on source when is empty.
   void SetHideable(bool hide) {hideable = hide;};
   //!<Tests whether position is available for this kind of the building.
-  bool TSOURCE_ITEM::IsPositionAvailable(int pos_x, int pos_y);
+  bool IsPositionAvailable(int pos_x, int pos_y);
 
   //! Specifies on which terrains it is able to build the item.
   TINTERVAL<TTERRAIN_ID> buildable[DAT_SEGMENTS_COUNT];

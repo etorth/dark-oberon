@@ -270,7 +270,7 @@ public:
   bool TestLastPathPosition(void);              //!< Tests if a_stem is last step.
   TPOSITION_3D GetGoalPosition();                       //!<Get goal of the path.
   TPATH_LIST* CreateCopy(int shift_x, int shift_y, int shift_z);          //!<The path list create copy of the itself with shift.
-  double TPATH_LIST::CountTime(TFORCE_UNIT *unit);      //!<Counts the time, which unit spends on the exact way.
+  double CountTime(TFORCE_UNIT *unit);      //!<Counts the time, which unit spends on the exact way.
   void DecreaseSteps(int st_count) { steps -= st_count;};    //! Decreases variable steps, used when building is build, unit cant go to the goal, but just near the newly built building.
   void IncreaseASteps();                        //!< Increases actuall step
   void DecreaseASteps();                        //!< Decrease actuall step
@@ -297,10 +297,10 @@ struct TPATH_NODE {
   //! Coordinates in the map, each step of the path is storaged in this array.
   TPOSITION_3D path_pos[WLK_NODES_NUM];
 
-  TPATH_NODE::TPATH_NODE(TPATH_NODE *first, TPOSITION_3D adding);  //!< Adding constructor.
-  TPATH_NODE::TPATH_NODE(TPOSITION_3D goal);    //!< Constructor.
+  TPATH_NODE(TPATH_NODE *first, TPOSITION_3D adding);  //!< Adding constructor.
+  TPATH_NODE(TPOSITION_3D goal);    //!< Constructor.
 private:
-  TPATH_NODE::TPATH_NODE(TPATH_NODE &origin, int sx, int sy, int sz);   //!< Constructor creates copy with shift.
+  TPATH_NODE(TPATH_NODE &origin, int sx, int sy, int sz);   //!< Constructor creates copy with shift.
   friend TPATH_LIST* TPATH_LIST::CreateCopy(int, int, int);
 };
 

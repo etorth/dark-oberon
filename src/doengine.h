@@ -212,7 +212,7 @@ public:
   std::string GetRacIdName (std::string name);
   std::string GetRacName (std::string id_name);
 
-  std::string TMAP_INFO_LIST::GetMapName (std::string id_name);
+  std::string GetMapName (std::string id_name);
 
   TMAP_INFO_LIST (void) { map_list = NULL; rac_list = NULL;};
   ~TMAP_INFO_LIST (void) { ClearMapList(); ClearRacList();};
@@ -276,7 +276,7 @@ public:
     order_panel = NULL;
   }
 
-  TPANEL_INFO::TPANEL_INFO() { Clear(); }
+  TPANEL_INFO() { Clear(); }
 };
 
 extern TPANEL_INFO panel_info;
