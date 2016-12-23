@@ -115,7 +115,7 @@ private:
 
 public:
   T_SIMPLE simple1, simple2, simple3, simple4, simple5, simple6;
-  int int1, int2;
+  intptr_t int1, int2;
   
   //!< Returns identificator of player.
   int GetPlayerID(void) {return player_id;};

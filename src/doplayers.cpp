@@ -251,7 +251,10 @@ TPLAYER::TPLAYER()
 /** Destructor. */
 TPLAYER::~TPLAYER(void)
 {
-  if (pathtools) delete pathtools;
+  if (pathtools){
+    delete pathtools;
+    pathtools = NULL;
+  }
 
   //while (units) delete units;
   while (units)

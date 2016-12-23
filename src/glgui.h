@@ -636,7 +636,6 @@ protected:
   virtual void Draw(GLfloat dx, GLfloat dy);
 
 public:
-
   TGUI_LIST(TGUI_BOX *bowner, int bkey, GLfloat bx, GLfloat by, char *bitems)
   :TGUI_LABEL(bowner, bkey, bx, by, "") {
     sel_font_color = sel_color = NULL; item_index = -1; padding = 5.0f;

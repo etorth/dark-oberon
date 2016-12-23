@@ -1177,14 +1177,14 @@ TPATH_INFO* TA_STAR_ALG::MoveGroup(TPATH_INFO* group_info)
       }
       //posli jednotke request, ze sa ma pohnut s danym request Id,ci uz cestu nasla alebo nie.
       u->SendRequest(false, time_stamp,RQ_GROUP_MOVING,group_info->request_id,group_info->succ,real_dest.x,real_dest.y,real_dest.segment,
-                      0,0,reinterpret_cast<int>(u_path),group_info->event_type);
+                      0,0,reinterpret_cast<intptr_t>(u_path),group_info->event_type);
     }    
     else
     {
       if (!leader || !fu)   //leader sa nenasiel, tak sa vsetkym jednotkam aspon ma poslat request, ze maju prejst do US_STAY
       {
         u->SendRequest(false, time_stamp,RQ_GROUP_MOVING,group_info->request_id,group_info->succ,group_info->real_goal.x,group_info->real_goal.y,group_info->real_goal.segment,
-                      0,0,reinterpret_cast<int>(group_info->path),group_info->event_type);
+                      0,0,reinterpret_cast<intptr_t>(group_info->path),group_info->event_type);
       }
     }
     actual = actual->next;
@@ -1192,7 +1192,7 @@ TPATH_INFO* TA_STAR_ALG::MoveGroup(TPATH_INFO* group_info)
 
   if(leader)
     leader->SendRequest(false, time_stamp,RQ_GROUP_MOVING,group_info->request_id,group_info->succ,group_info->real_goal.x,group_info->real_goal.y,group_info->real_goal.segment,
-                      0,0,reinterpret_cast<int>(group_info->path),group_info->event_type);
+                      0,0,reinterpret_cast<intptr_t>(group_info->path),group_info->event_type);
 
   group_info->path = NULL;
 
@@ -1227,7 +1227,7 @@ TPATH_INFO* TA_STAR_ALG::ComputePath(TPATH_INFO* path_info)
 
     path_info->unit->SendRequest(false, glfwGetTime(), RQ_PATH_FINDING, path_info->request_id,path_info->succ,
                                  path_info->real_goal.x, path_info->real_goal.y,path_info->real_goal.segment,path_info->e_simple1,
-                                 path_info->e_simple2,reinterpret_cast<int>(p_pathlist),path_info->event_type);                 
+                                 path_info->e_simple2,reinterpret_cast<intptr_t>(p_pathlist),path_info->event_type);                 
 
     path_info->unit->ReleasePointer();
     pool_path_info->PutToPool(path_info);
@@ -1252,7 +1252,7 @@ TNEAREST_INFO* TA_STAR_ALG::SearchForNearestBuilding(TNEAREST_INFO* pnearest_inf
   
     pnearest_info->unit->SendRequest(false, glfwGetTime(),RQ_NEAREST_SEARCHING,pnearest_info->request_id,pnearest_info->simple1,
                                    pnearest_info->simple2,0,0,0,0, 
-                                   reinterpret_cast<int>(pnearest_info->nearest),pnearest_info->event_type);
+                                   reinterpret_cast<intptr_t>(pnearest_info->nearest),pnearest_info->event_type);
 
     pool_nearest_info->PutToPool(pnearest_info);
     pnearest_info = NULL;

@@ -1639,7 +1639,10 @@ void TFORCE_UNIT::ProcessEvent(TEVENT * proc_event)
           {
             T_SIMPLE succ = proc_event->simple1;
 
-            if ((!succ) && (path)) delete path;
+            if ((!succ) && (path)){
+              delete path;
+              path = NULL;
+            }
 
             // in all cases send US_NEXT_STEP
             SendEvent(false, proc_event->GetTimeStamp(), US_NEXT_STEP, -1, GetPosition().x, GetPosition().y, GetPosition().segment, GetMoveDirection()); 

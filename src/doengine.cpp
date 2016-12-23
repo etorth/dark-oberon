@@ -3981,7 +3981,7 @@ void CreateBuildButtons()
 
     for (i = 0, node = itm->build_list.GetFirst(); node; node = node->GetNext(), i++) {
       button = panel_info.action_panel[MNU_PANEL_BUILD]->AddGroupButton(
-        (int)node->GetPitem(), x, y, myself->race->tex_table.GetTexture(node->GetPitem()->tg_picture_id, 0), 3
+        (int)(intptr_t)node->GetPitem(), x, y, myself->race->tex_table.GetTexture(node->GetPitem()->tg_picture_id, 0), 3
       );
       SetBuildButton();
       
@@ -4007,7 +4007,7 @@ void CreateBuildButtons()
   
     for (i = 0, node = itm->GetProductsList().GetFirstNode(); node; node = node->GetNextNode(), i++) {
       button = panel_info.action_panel[MNU_PANEL_BUILD]->AddButton(
-        (int)node->GetProduceableItem(), x, y, myself->race->tex_table.GetTexture(node->GetProduceableItem()->tg_picture_id, 0)
+        (int)(intptr_t)node->GetProduceableItem(), x, y, myself->race->tex_table.GetTexture(node->GetProduceableItem()->tg_picture_id, 0)
       );
 
       SetProduceButton();
@@ -4072,7 +4072,7 @@ void CreateOrderButtons()
 
   for (i = 0; i < funit->GetOrderSize(); i++) {
     button = panel_info.order_panel->AddButton(
-      (int)funit->GetOrderedUnit(i)->GetProduceableItem(), i * 52.0f, 0.0f, myself->race->tex_table.GetTexture(funit->GetOrderedUnit(i)->GetProduceableItem()->tg_picture_id, 0)
+      (int)(intptr_t)funit->GetOrderedUnit(i)->GetProduceableItem(), i * 52.0f, 0.0f, myself->race->tex_table.GetTexture(funit->GetOrderedUnit(i)->GetProduceableItem()->tg_picture_id, 0)
     );
 
     sprintf(txt, "%d", i + 1);

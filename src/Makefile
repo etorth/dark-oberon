@@ -20,7 +20,7 @@ checking: .checking
 	@touch .checking
 
 clean: 
-	rm -f $(OBJECTS) $(TARGETS) *core core.* tags
+	rm -f *.o $(OBJECTS) $(TARGETS) *core core.* tags
 
 tags: *.h *.cpp
 	-exctags * 2> /dev/null || ctags * 2> /dev/null
