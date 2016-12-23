@@ -136,7 +136,7 @@ bool TTEX_TABLE::Load(const char *file_name, int mag_filter, int min_filter)
   }
 
   // seeks
-  fread(&textures_seek, sizeof(textures_seek), 1, fr);
+  fread(&textures_seek, 4, 1, fr);
 
   if (!textures_seek) {
     Error(LogMsg("Data file '%s' does not contain any textures", file_name));
