@@ -474,7 +474,7 @@ TPLAYER_UNIT::~TPLAYER_UNIT()
  *
  *  @notes If n_request_id != 0 then requestid in event is set to n_requestid else new requestid is generated
  */
-int TPLAYER_UNIT::SendRequest(bool n_priority, double n_time_stamp, int n_event, int n_request_id, T_SIMPLE n_simple1, T_SIMPLE n_simple2, T_SIMPLE n_simple3, T_SIMPLE n_simple4, T_SIMPLE n_simple5, T_SIMPLE n_simple6, int n_int1,int n_int2)
+int TPLAYER_UNIT::SendRequest(bool n_priority, double n_time_stamp, int n_event, int n_request_id, T_SIMPLE n_simple1, T_SIMPLE n_simple2, T_SIMPLE n_simple3, T_SIMPLE n_simple4, T_SIMPLE n_simple5, T_SIMPLE n_simple6, intptr_t n_int1,intptr_t n_int2)
 {
   TEVENT * hlp;
   int ret = 0;
@@ -502,7 +502,7 @@ int TPLAYER_UNIT::SendRequest(bool n_priority, double n_time_stamp, int n_event,
  *
  *  @notes If n_request_id != 0 then requestid in event is set to n_requestid else new requestid is generated
  */
-TEVENT * TPLAYER_UNIT::SendRequestLocal(bool n_priority, double n_time_stamp, int n_event, int n_request_id, T_SIMPLE n_simple1, T_SIMPLE n_simple2, T_SIMPLE n_simple3, T_SIMPLE n_simple4, T_SIMPLE n_simple5, T_SIMPLE n_simple6, int n_int1,int n_int2)
+TEVENT * TPLAYER_UNIT::SendRequestLocal(bool n_priority, double n_time_stamp, int n_event, int n_request_id, T_SIMPLE n_simple1, T_SIMPLE n_simple2, T_SIMPLE n_simple3, T_SIMPLE n_simple4, T_SIMPLE n_simple5, T_SIMPLE n_simple6, intptr_t n_int1,intptr_t n_int2)
 {
   TEVENT * hlp;
 

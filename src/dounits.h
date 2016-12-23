@@ -346,7 +346,7 @@ class TPLAYER_UNIT : public TDRAW_UNIT {
   friend class TPLAYER;
 
 public:
-  virtual TEVENT* SendEvent(bool n_priority=false, double n_time_stamp=0, int n_event=0, int n_request_id=0, T_SIMPLE n_simple1=0, T_SIMPLE n_simple2=0, T_SIMPLE n_simple3=0, T_SIMPLE n_simple4=0, T_SIMPLE n_simple5=0, T_SIMPLE n_simple6=0, int n_int1=0,int n_int2=0) {return NULL;}; //TPLAYER_UNIT::SendEvent() should be never called.
+  virtual TEVENT* SendEvent(bool n_priority=false, double n_time_stamp=0, int n_event=0, int n_request_id=0, T_SIMPLE n_simple1=0, T_SIMPLE n_simple2=0, T_SIMPLE n_simple3=0, T_SIMPLE n_simple4=0, T_SIMPLE n_simple5=0, T_SIMPLE n_simple6=0, intptr_t n_int1=0,intptr_t n_int2=0) {return NULL;}; //TPLAYER_UNIT::SendEvent() should be never called.
   virtual void TestVisibility();
   virtual bool IsGhost() { return false; }
   virtual void CreateGhost() {}
@@ -356,8 +356,8 @@ public:
   T_BYTE GetPlayerID() const ;
   TPLAYER* GetPlayer() const { return player; };        //!< Returns pointer to owner of the unit.
   virtual void ProcessEvent(TEVENT * proc_event) {};
-  int SendRequest(bool n_priority=false, double n_time_stamp=0, int n_event=0, int n_request_id =0, T_SIMPLE n_simple1=0, T_SIMPLE n_simple2=0, T_SIMPLE n_simple3=0, T_SIMPLE n_simple4=0, T_SIMPLE n_simple5=0, T_SIMPLE n_simple6=0, int n_int1=0,int n_int2=0);
-  TEVENT * SendRequestLocal(bool priority=false, double n_time_stamp=0, int n_event=0, int n_request_id =0, T_SIMPLE n_simple1=0, T_SIMPLE n_simple2=0, T_SIMPLE n_simple3=0, T_SIMPLE n_simple4=0, T_SIMPLE n_simple5=0, T_SIMPLE n_simple6=0, int n_int1=0,int n_int2=0);
+  int SendRequest(bool n_priority=false, double n_time_stamp=0, int n_event=0, int n_request_id =0, T_SIMPLE n_simple1=0, T_SIMPLE n_simple2=0, T_SIMPLE n_simple3=0, T_SIMPLE n_simple4=0, T_SIMPLE n_simple5=0, T_SIMPLE n_simple6=0, intptr_t n_int1=0,intptr_t n_int2=0);
+  TEVENT * SendRequestLocal(bool priority=false, double n_time_stamp=0, int n_event=0, int n_request_id =0, T_SIMPLE n_simple1=0, T_SIMPLE n_simple2=0, T_SIMPLE n_simple3=0, T_SIMPLE n_simple4=0, T_SIMPLE n_simple5=0, T_SIMPLE n_simple6=0, intptr_t n_int1=0,intptr_t n_int2=0);
   void SendNetEvent(TEVENT * event, int player_id);
 
   TEVENT * pevent; //!< Pointer to event.
@@ -844,7 +844,7 @@ class TFORCE_UNIT : public TBASIC_UNIT {
 public:
 
   virtual void ProcessEvent(TEVENT * proc_event);
-  virtual TEVENT* SendEvent(bool n_priority=false, double n_time_stamp=0, int n_event=0, int n_request_id=0, T_SIMPLE n_simple1=0, T_SIMPLE n_simple2=0, T_SIMPLE n_simple3=0, T_SIMPLE n_simple4=0, T_SIMPLE n_simple5=0, T_SIMPLE n_simple6=0, int n_int1=0,int n_int2=0);
+  virtual TEVENT* SendEvent(bool n_priority=false, double n_time_stamp=0, int n_event=0, int n_request_id=0, T_SIMPLE n_simple1=0, T_SIMPLE n_simple2=0, T_SIMPLE n_simple3=0, T_SIMPLE n_simple4=0, T_SIMPLE n_simple5=0, T_SIMPLE n_simple6=0, intptr_t n_int1=0,intptr_t n_int2=0);
   virtual bool UpdateGraphics(double time_shift);
   virtual void DrawLine();
   virtual bool StartStaying();
@@ -1003,7 +1003,7 @@ public:
 
   virtual void ClearActions();
   virtual void ChangeAnimation();
-  virtual TEVENT* SendEvent(bool n_priority=false, double n_time_stamp=0, int n_event=0, int n_request_id=0, T_SIMPLE n_simple1=0, T_SIMPLE n_simple2=0, T_SIMPLE n_simple3=0, T_SIMPLE n_simple4=0, T_SIMPLE n_simple5=0, T_SIMPLE n_simple6=0, int n_int1=0,int n_int2=0);
+  virtual TEVENT* SendEvent(bool n_priority=false, double n_time_stamp=0, int n_event=0, int n_request_id=0, T_SIMPLE n_simple1=0, T_SIMPLE n_simple2=0, T_SIMPLE n_simple3=0, T_SIMPLE n_simple4=0, T_SIMPLE n_simple5=0, T_SIMPLE n_simple6=0, intptr_t n_int1=0,intptr_t n_int2=0);
   virtual void ProcessEvent(TEVENT * proc_event);
   virtual bool UpdateGraphics(double time_shift);
 
@@ -1181,7 +1181,7 @@ public:
   virtual bool UpdateGraphics(double time_shift);
   virtual void ProcessEvent(TEVENT * proc_event);
   virtual void TestVisibility();
-  virtual TEVENT* SendEvent(bool n_priority=false, double n_time_stamp=0, int n_event=0, int n_request_id=0, T_SIMPLE n_simple1=0, T_SIMPLE n_simple2=0, T_SIMPLE n_simple3=0, T_SIMPLE n_simple4=0, T_SIMPLE n_simple5=0, T_SIMPLE n_simple6=0, int n_int1=0,int n_int2=0);
+  virtual TEVENT* SendEvent(bool n_priority=false, double n_time_stamp=0, int n_event=0, int n_request_id=0, T_SIMPLE n_simple1=0, T_SIMPLE n_simple2=0, T_SIMPLE n_simple3=0, T_SIMPLE n_simple4=0, T_SIMPLE n_simple5=0, T_SIMPLE n_simple6=0, intptr_t n_int1=0,intptr_t n_int2=0);
   virtual void Disconnect();
   
   T_BYTE GetOfferMaterial() const { return static_cast<TSOURCE_ITEM*>(GetPointerToItem())->GetOfferMaterial(); };

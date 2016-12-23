@@ -172,7 +172,7 @@ public:
   TEVENT *GetPrevQueueEvent(void) {return queue_left;};
   
   void Clear(bool all); // Clears TEVENT values. If all == true, clears pointers too
-  void SetEventProps(int n_player_id, int n_unit_id, bool n_priority, double n_time_stamp, int n_event, int n_last_event, int n_request_id, T_SIMPLE n_simple1, T_SIMPLE n_simple2, T_SIMPLE n_simple3, T_SIMPLE n_simple4, T_SIMPLE n_simple5, T_SIMPLE n_simple6, int n_int1,int n_int2=0); // sets event's properties
+  void SetEventProps(int n_player_id, int n_unit_id, bool n_priority, double n_time_stamp, int n_event, int n_last_event, int n_request_id, T_SIMPLE n_simple1, T_SIMPLE n_simple2, T_SIMPLE n_simple3, T_SIMPLE n_simple4, T_SIMPLE n_simple5, T_SIMPLE n_simple6, intptr_t n_int1,intptr_t n_int2=0); // sets event's properties
   
   int LinearizeEvent(char * char_event); // Linearize event to array of chars (prepare event for net).
   void DelinearizeEvent(char * char_event, int lin_event_len); // Delinearize event from array of chars (fill event with data in char).

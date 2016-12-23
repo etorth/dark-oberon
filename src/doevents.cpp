@@ -121,7 +121,7 @@ void TEVENT::SetRequestID(int new_request_id, int player_id)
  *  If n_request_id is 0, autogenerates new request id.
  *  If player with identificator n_player_id does not exists, request_id is set to 0
  */
-void TEVENT::SetEventProps(int n_player_id, int n_unit_id, bool n_priority, double n_time_stamp, int n_event, int n_last_event, int n_request_id, T_SIMPLE n_simple1, T_SIMPLE n_simple2, T_SIMPLE n_simple3, T_SIMPLE n_simple4, T_SIMPLE n_simple5, T_SIMPLE n_simple6, int n_int1,int n_int2)
+void TEVENT::SetEventProps(int n_player_id, int n_unit_id, bool n_priority, double n_time_stamp, int n_event, int n_last_event, int n_request_id, T_SIMPLE n_simple1, T_SIMPLE n_simple2, T_SIMPLE n_simple3, T_SIMPLE n_simple4, T_SIMPLE n_simple5, T_SIMPLE n_simple6, intptr_t n_int1,intptr_t n_int2)
 {
   // identification values
   player_id = n_player_id;

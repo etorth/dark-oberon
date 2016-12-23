@@ -103,7 +103,7 @@ TFORCE_UNIT::~TFORCE_UNIT()
  *  If unit has som event in queue, check if it is endable state or not.
  *  if in queue is not endable state make necessary undo actions (returns one piece of material into source...)
  */
-TEVENT* TFORCE_UNIT::SendEvent(bool n_priority, double n_time_stamp, int n_event, int n_request_id, T_SIMPLE n_simple1, T_SIMPLE n_simple2, T_SIMPLE n_simple3, T_SIMPLE n_simple4, T_SIMPLE n_simple5, T_SIMPLE n_simple6, int n_int1,int n_int2)
+TEVENT* TFORCE_UNIT::SendEvent(bool n_priority, double n_time_stamp, int n_event, int n_request_id, T_SIMPLE n_simple1, T_SIMPLE n_simple2, T_SIMPLE n_simple3, T_SIMPLE n_simple4, T_SIMPLE n_simple5, T_SIMPLE n_simple6, intptr_t n_int1,intptr_t n_int2)
 {
   int old_state = US_NONE, last_event = US_NONE;
 
